@@ -1,14 +1,81 @@
-body {
-    background-color: #0d1117;
-    color: #39ff14; /* Neonowa zieleń */
-    font-family: 'Courier New', Courier, monospace;
-    display: flex;
-    justify-content: center;
-    padding-top: 50px;
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Inconsolata:wght@400;700&display=swap');
+
+html {
+    cursor: url('https://cur.cursors-4u.net/games/gam-4/gam372.cur'), auto;
 }
 
-main {
-    border: 1px solid #39ff14;
+/* Kontener trzymający wszystko na środku */
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    box-shadow: 10px 10px 0px #004d00;
+}
+
+/* Stylizacja nawigacji (Retro Bar) */
+nav {
+    background: #00ff00; /* Zielony pasek */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    background: #000;
+    color: #00ff00;
+}
+
+/* Odstępy między sekcjami */
+section {
+    padding: 60px 0;
+}
+
+hr {
+    border: 0;
+    border-top: 2px dashed #00ff00;
+}
+
+body::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
+}
+
+
+body {
+    background-color: #0b0d02;
+    color: #39ff14;
+    font-family: 'VT323', monospace;
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.7), 0 0 10px rgba(57, 255, 20, 0.5);
+    font-size: 1.5rem;
+}
+
+
+   main {
+    border: 4px double #39ff14;
+    padding: 20px;
+    background-color: #000;
 }
