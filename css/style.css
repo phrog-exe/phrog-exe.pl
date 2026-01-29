@@ -11,9 +11,9 @@ html {
     padding: 20px;
 }
 
-/* Stylizacja nawigacji (Retro Bar) */
+
 nav {
-    background: #00ff00; /* Zielony pasek */
+    background: #00ff00; 
     padding: 10px 0;
     position: sticky;
     top: 0;
