@@ -1,0 +1,14 @@
+body {
+    background-color: #0d1117;
+    color: #39ff14; /* Neonowa zieleń */
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+main {
+    border: 1px solid #39ff14;
+    padding: 20px;
+    box-shadow: 10px 10px 0px #004d00;
+}

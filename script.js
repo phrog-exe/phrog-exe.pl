@@ -1,0 +1,1 @@
+console.log("Phrog.exe został pomyślnie załadowany! 🐸");
