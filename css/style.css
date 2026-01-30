@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&family=Inconsolata:wght@400;700&display=swap');
 
 html {
-    cursor: url('https://cur.cursors-4u.net/games/gam-4/gam372.cur'), auto;
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=177321), auto;
 }
 
 /* Kontener trzymający wszystko na środku */
@@ -52,6 +52,47 @@ hr {
     border-top: 2px dashed #00ff00;
 }
 
+
+.retro-btn {
+
+
+
+    background-color: #000;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    font-family: 'Courier New', monospace;
+    padding: 10px 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 4px 4px 0px #005500;
+    text-decoration: none; 
+    display: inline-block; /* Pozwala linkom mieć marginesy i dopełnienie */
+    margin: 5px;
+    transition: all 0.2s;
+}
+
+.retro-btn:hover {
+    background-color: #00ff00;
+    color: #000;
+    box-shadow: 2px 2px 0px #005500;
+    transform: translate(2px, 2px);
+}
+/* navbar buttons*/
+.nav-link {
+
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #00ff00;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-family: 'Courier New', monospace;
+}
+
+.nav-link:hover {
+    box-shadow: 0 0 10px #00ff00; 
+}
+
 body::before {
     content: " ";
     display: block;
@@ -79,3 +120,4 @@ body {
     padding: 20px;
     background-color: #000;
 }
+

@@ -20,13 +20,16 @@
 
 <nav>
   <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="pages/about.html">About Me</a></li>
-    <li><a href="pages/projects.html">Projects</a></li>
-    <li><a href="pages/contact.html">Contact</a></li>
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="pages/about.html"class="nav-link">About Me</a></li>
+    <li><a href="pages/projects.html"class="nav-link">Projects</a></li>
+    <li><a href="pages/contact.html"class="nav-link">Contact</a></li>
   </ul>
 </nav>
 
+<marquee scrollamount="5" style="border: 1px solid #00ff00; color: #00ff00; padding: 5px;">
+    NOWOŚĆ: Dodano losowanie żaby dnia! | Więcej funkcji już niedługo!
+</marquee>
 
 <div class="content-wrapper">
   <section id="home">
@@ -35,7 +38,17 @@
   </section>
 
   <hr>
-
+<section id="daily-phrog">
+    <hr>
+    <h2>Żaba Dnia</h2>
+    <div id="frog-container">
+        <img id="random-frog" src="phrog.gif" alt="Kliknij przycisk, by wylosować żabę!" style="max-width: 300px; border: 3px double #00ff00;">
+    </div>
+    <p id="frog-name"></p>
+    <button onclick="pickFrog()" class="retro-btn">
+        LOSUJ NOWĄ ŻABĘ! 🐸
+    </button>
+</section>
 
 
     <script src="js/script.js"></script>
