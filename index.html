@@ -20,35 +20,82 @@
 
 <nav>
   <ul>
-    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="/" class="nav-link">Home</a></li>
     <li><a href="pages/about.html"class="nav-link">About Me</a></li>
     <li><a href="pages/projects.html"class="nav-link">Projects</a></li>
     <li><a href="pages/contact.html"class="nav-link">Contact</a></li>
   </ul>
 </nav>
 
-<marquee scrollamount="5" style="border: 1px solid #00ff00; color: #00ff00; padding: 5px;">
+<marquee scrollamount="7" style="border: 1px solid #00ff00; color: #00ff00; padding: 5px;">
     NOWOŚĆ: Dodano losowanie żaby dnia! | Więcej funkcji już niedługo!
 </marquee>
 
-<div class="content-wrapper">
-  <section id="home">
-    <h1>Welcome to phrog-exe.pl 🐸</h1>
-    <p>Enjoy spending time in my digital garden </p>
-  </section>
 
-  <hr>
-<section id="daily-phrog">
-    <hr>
-    <h2>Żaba Dnia</h2>
-    <div id="frog-container">
-        <img id="random-frog" src="phrog.gif" alt="Kliknij przycisk, by wylosować żabę!" style="max-width: 300px; border: 3px double #00ff00;">
-    </div>
-    <p id="frog-name"></p>
-    <button onclick="pickFrog()" class="retro-btn">
-        LOSUJ NOWĄ ŻABĘ! 🐸
-    </button>
+
+ <div id="main-container">
+    <header class="section-box">
+        <h1>Welcome to phrog-exe.pl 🐸</h1>
+        <p>Enjoy spending time in my digital garden</p>
+    </header>
+
+    <div class="content-wrapper">
+        <aside class="section-box side-panel">
+            <h2>Żaba Dnia</h2>
+            <div id="frog-container">
+                <img id="random-frog" src="phrog.gif" alt="Frog">
+            </div>
+            <p id="frog-name"></p>
+            <button onclick="pickFrog()" class="retro-btn">LOSUJ! 🐸</button>
+        </aside>
+
+        <main class="section-box">
+            <hr>
+
+<section id="mini-bio">
+    <h3>Bio</h3>
+    <p style="font-size: 1rem;">Frogramerka. Robię różne projety, niestety często ich nie kończę, więc może ta strona mnie do tego zmotywuje 🌿</p>
 </section>
+
+<hr>
+
+<section id="project-progress">
+    <h3>Budowa strony</h3>
+    <div style="border: 2px solid #00ff00; width: 100%; height: 15px; background: #000; margin: 5px 0;">
+        <div style="background: #00ff00; width: 20%; height: 100%;"></div>
+    </div>
+    <p style="font-size: 0.8rem;">Postęp: 20%</p>
+</section>
+
+<hr>
+
+<section id="socials">
+    <h3>Socials</h3>
+    <div style=" display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://github.com/phrog-exe" class="socials" target="_blank">GitHub</a>
+        <a href="https://discord.com/users/phrogatron" class="socials" target="_blank">Discord</a>
+        <a href="https://instagram.com/phrog_xo" class="socials" target="_blank">Insta</a>
+
+      
+    </div>
+</section>
+        </main>
+
+
+
+    </div> 
+    
+    <footer class="section-box">
+        Frogramer Network™ 2026
+    </footer>
+</div>
+
+
+
+</section>
+
+
+
 
 
     <script src="js/script.js"></script>

@@ -12,6 +12,74 @@ html {
 }
 
 
+
+/* Główny kontener trzymający stronę na środku */
+#main-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styl dla każdego "pudełka" sekcji */
+.section-box {
+    border: 2px solid #00ff00; 
+    background-color: #000;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 6px 6px 0px #005500; 
+}
+
+
+
+/* Wymuszenie szerokości dla stopki */
+footer.section-box {
+    clear: both;          
+    width: 100%;          
+    box-sizing: border-box; 
+    margin-top: 20px;     
+    text-align: center;   
+}
+
+/* Upewnij się, że kontener flex nie psuje układu pionowego */
+#main-container {
+    display: flex;
+    flex-direction: column; /* Układa Header, Content i Footer jeden pod drugim */
+}
+
+
+/* Układ boczny panel + treść główna */
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+   
+}
+
+
+#random-frog {
+    max-width: 100%;          /* Zapobiega wystawaniu poza ramkę pudełka */
+    height: auto;             /* Zachowuje proporcje zdjęcia */
+     border: 2px solid #00ff00;/* Twoja neonowa ramka */
+    display: block;           /* Usuwa zbędne marginesy na dole obrazka */
+}
+
+.side-panel {
+    display: flex;
+    flex-direction: column;  /* Układa elementy jeden pod drugim */
+    align-items: center;      /* Środkuje elementy w poziomie */
+    justify-content: center;  /* Środkuje elementy w pionie (opcjonalnie) */
+    text-align: center;       /* Środkuje sam tekst (np. nazwę żaby) */
+    gap: 15px;                /* Tworzy równe odstępy między nagłówkiem, zdjęciem i przyciskiem *//* Węższy panel boczny */
+}
+
+main {
+    flex: 3; /* Szersza treść główna */
+}
+
+
+
+
+
+
 nav {
     background: #00ff00; 
     padding: 10px 0;
@@ -93,6 +161,16 @@ hr {
     box-shadow: 0 0 10px #00ff00; 
 }
 
+.socials {
+
+    color: white;
+    text-decoration: none;
+    border: 1px solid #00ff00;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-family: 'Courier New', monospace;
+}
+
 body::before {
     content: " ";
     display: block;
@@ -115,9 +193,4 @@ body {
 }
 
 
-   main {
-    border: 4px double #39ff14;
-    padding: 20px;
-    background-color: #000;
-}
 
