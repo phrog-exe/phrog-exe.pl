@@ -40,7 +40,7 @@ footer.section-box {
     text-align: center;   
 }
 
-/* Upewnij się, że kontener flex nie psuje układu pionowego */
+
 #main-container {
     display: flex;
     flex-direction: column; /* Układa Header, Content i Footer jeden pod drugim */
@@ -56,19 +56,19 @@ footer.section-box {
 
 
 #random-frog {
-    max-width: 100%;          /* Zapobiega wystawaniu poza ramkę pudełka */
-    height: auto;             /* Zachowuje proporcje zdjęcia */
-     border: 2px solid #00ff00;/* Twoja neonowa ramka */
-    display: block;           /* Usuwa zbędne marginesy na dole obrazka */
+    max-width: 100%;          
+    height: auto;             
+     border: 2px solid #00ff00;
+    display: block;           
 }
 
 .side-panel {
     display: flex;
-    flex-direction: column;  /* Układa elementy jeden pod drugim */
-    align-items: center;      /* Środkuje elementy w poziomie */
-    justify-content: center;  /* Środkuje elementy w pionie (opcjonalnie) */
-    text-align: center;       /* Środkuje sam tekst (np. nazwę żaby) */
-    gap: 15px;                /* Tworzy równe odstępy między nagłówkiem, zdjęciem i przyciskiem *//* Węższy panel boczny */
+    flex-direction: column;  
+    align-items: center;      
+    justify-content: center;  
+    text-align: center;       
+    gap: 15px;                
 }
 
 main {
@@ -193,4 +193,46 @@ body {
 }
 
 
+.project-layout {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Na telefonach zdjęcie będzie nad tekstem */
+    align-items: flex-start;
+}
 
+.project-image img {
+   max-width: 600px; 
+    width: auto;      
+    height: auto;     
+    display: block;   
+    image-rendering: auto; 
+
+     border: 1px solid #00ff00;
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+.project-image {
+    position: relative;
+    z-index: 5; 
+}
+
+.project-image img:hover {
+    border-color: #ffffff;
+    cursor: zoom-in;      /* Zmiana kursora na lupę */
+    
+}
+
+.tech-stack {
+    list-style: ">> ";
+    padding-left: 50px;
+    margin: 15px 0;
+     color: white;
+    text-decoration: none;
+    font-family: 'Courier New', monospace;
+}
+
+
+.project-links {
+    margin-top: 20px;
+}

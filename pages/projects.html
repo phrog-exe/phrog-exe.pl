@@ -14,7 +14,7 @@
 
     
     <main class="h-card"> <h1 class="p-name">Welcome to phrog-exe.pl</h1>
-        <p class="p-note">Website in construction!</p>
+        <p class="p-note">Website under construction!</p>
         
     </main>
 
@@ -27,18 +27,43 @@
   </ul>
 </nav>
 
-  <section id="projects">
-    <h2>Projekty</h2>
-    <ul>
-      <li><strong>Projekt 1:</strong> Ta właśnie strona.</li>
-      
-    </ul>
+ 
+
+<section class="section-box project-entry">
+    <h2>🐸 Cloud Infrastructure: Dockerized WordPress Environment</h2>
+    
+    <div class="project-layout">
+        <div class="project-image">
+    <a href="\assets\projects\projekt1.png" target="_blank">
+        <img src="\assets\projects\projekt1.png" alt="Screen projektu">
+    </a>
+</div>
+        
+        <div class="project-info">
+            <h3>O projekcie:</h3>
+            <p>Projekt polegał na przygotowaniu i wdrożeniu gotowej do pracy platformy CMS w chmurze Google Cloud Platform przy użyciu Dockera.</p>
+            
+            <ul class="tech-stack">
+                
+                <li><strong>Orkiestracja mikroserwisów:</strong> Połączenie WordPressa, bazy danych MySQL i panelu phpMyAdmin w jedną, współpracującą sieć wewnątrz Dockera.</li>
+                <li><strong>Wdrożenie Cloud (GCP):</strong> Samodzielna konfiguracja instancji serwera, zarządzanie zaporą sieciową (Firewall) i przypisanie publicznego adresu IP.</li>
+                <li><strong>Automatyzacja wdrożenia:</strong> Przygotowanie skryptu docker-compose.yml, który pozwala postawić całe środowisko na dowolnym serwerze jedną komendą.</li>
+                <li><strong>Zarządzanie konfiguracją:</strong> Wykorzystanie zmiennych środowiskowych do bezpiecznego łączenia usług wewnątrz chmury.</li>
+                <li><strong>Technologie:</strong> Docker, Docker Compose, MySQL, GCP (Compute Engine), Git.</li>
+            </ul>
+
+            <div class="project-links">
+                <a href="https://github.com/phrog-exe/Przetwarzanie-rozproszone" class="retro-btn" target="_blank">Kod źródłowy</a>
+                <a href="http://34.171.210.147" class="retro-btn" target="_blank">Link</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
   </section>
   
-<a href="assets/downloads/plik.zip" download class="retro-btn">
-    <img src="../assets/icons/Diskette.ico" alt="icon" style="width: 24px; image-rendering: pixelated;">
-    Pobierz Projekt
-</a>
+
 
     <script src="../js/script.js"></script>
 </body>
