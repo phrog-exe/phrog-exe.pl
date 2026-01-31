@@ -196,42 +196,40 @@ body {
 .project-layout {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Na telefonach zdjęcie będzie nad tekstem */
+    flex-wrap: wrap;
     align-items: flex-start;
-}
-
-.project-image img {
-   max-width: 600px; 
-    width: auto;      
-    height: auto;     
-    display: block;   
-    image-rendering: auto; 
-
-     border: 1px solid #00ff00;
-    padding: 5px 10px;
-    margin: 0 5px;
 }
 
 .project-image {
     position: relative;
     z-index: 5; 
+    flex: 1; /* Pozwala obrazkowi rosnąć */
+    min-width: 300px; /* Zapobiega zbytniemu ściskaniu */
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: auto;
+    border: 1px solid #00ff00;
+    transition: transform 0.2s ease; /* Płynne przejście */
 }
 
 .project-image img:hover {
     border-color: #ffffff;
-    cursor: zoom-in;      /* Zmiana kursora na lupę */
-    
+    cursor: zoom-in;
+    transform: scale(1.02); /* Lekkie powiększenie przy najechaniu */
 }
 
 .tech-stack {
     list-style: ">> ";
-    padding-left: 50px;
+    padding-left: 25px; /* Mniejszy padding dla lepszej responsywności */
     margin: 15px 0;
-     color: white;
-    text-decoration: none;
+    color: white;
     font-family: 'Courier New', monospace;
+    font-size: 1.1rem; /* Trochę mniejszy font, by tech-stack nie był za wielki */
 }
-
 
 .project-links {
     margin-top: 20px;
