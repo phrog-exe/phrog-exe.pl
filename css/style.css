@@ -242,7 +242,23 @@ body {
 /* Style dla telefonów i tabletów */
 @media (max-width: 768px) {
     .content-wrapper {
-        flex-direction: column; /* Zmienia układ z poziomego na pionowy */
+        flex-direction: column; 
+    }
+
+    .project-image img {
+        max-width: 90%;      
+        margin: 0 auto;      
+        display: block;       
+    }
+
+
+    .project-layout {
+        justify-content: center; 
+    }
+
+    .tech-stack {
+        padding-left: 15px;   /* Zmniejszenie wcięcia na małym ekranie, by tekst nie był ściśnięty */
+        font-size: 1rem;      
     }
 
     .side-panel {
@@ -266,3 +282,4 @@ body {
         font-size: 1.2rem; 
     }
 }
+
