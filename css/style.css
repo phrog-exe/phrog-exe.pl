@@ -237,3 +237,32 @@ body {
 .project-links {
     margin-top: 20px;
 }
+
+
+/* Style dla telefonów i tabletów */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Zmienia układ z poziomego na pionowy */
+    }
+
+    .side-panel {
+        width: 100%; 
+        order: 2;    
+    }
+
+    main {
+        width: 100%;
+        order: 1;    /* Treść główna będzie pierwsza na telefonie */
+    }
+
+    
+    nav ul {
+        flex-direction: column; /* Menu w pionie */
+        align-items: center;
+        gap: 10px;
+    }
+
+    body {
+        font-size: 1.2rem; 
+    }
+}
