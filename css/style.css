@@ -1,65 +1,67 @@
+/* =========================================
+   1. IMPORTY I GLOBALNE (HTML, BODY)
+   ========================================= */
 @import url('https://fonts.googleapis.com/css2?family=VT323&family=Inconsolata:wght@400;700&display=swap');
 
 html {
     cursor: url(http://www.rw-designer.com/cursor-extern.php?id=177321), auto;
 }
 
-/* Kontener trzymający wszystko na środku */
-.content-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+body {
+    background-color: #0b0d02;
+    color: #39ff14;
+    font-family: 'VT323', monospace;
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.7), 0 0 10px rgba(57, 255, 20, 0.5);
+    font-size: 1.5rem;
 }
 
+body::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    z-index: 2;
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
+}
 
-
-/* Główny kontener trzymający stronę na środku */
+/* =========================================
+   2. KONTENERY I UKŁAD (LAYOUT)
+   ========================================= */
 #main-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Styl dla każdego "pudełka" sekcji */
+#main-container {
+    display: flex;
+    flex-direction: column; 
+}
+
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+main {
+    flex: 3; /* Szersza treść główna */
+}
+
 .section-box {
     border: 2px solid #00ff00; 
     background-color: #000;
     margin-bottom: 20px;
     padding: 15px;
     box-shadow: 6px 6px 0px #005500; 
-}
-
-
-
-/* Wymuszenie szerokości dla stopki */
-footer.section-box {
-    clear: both;          
-    width: 100%;          
-    box-sizing: border-box; 
-    margin-top: 20px;     
-    text-align: center;   
-}
-
-
-#main-container {
-    display: flex;
-    flex-direction: column; /* Układa Header, Content i Footer jeden pod drugim */
-}
-
-
-/* Układ boczny panel + treść główna */
-.content-wrapper {
-    display: flex;
-    gap: 20px;
-   
-}
-
-
-#random-frog {
-    max-width: 100%;          
-    height: auto;             
-     border: 2px solid #00ff00;
-    display: block;           
 }
 
 .side-panel {
@@ -71,21 +73,17 @@ footer.section-box {
     gap: 15px;                
 }
 
-main {
-    flex: 3; /* Szersza treść główna */
-}
-
-
-
-
-
-
+/* =========================================
+   3. NAWIGACJA (NAV)
+   ========================================= */
 nav {
-    background: #00ff00; 
-    padding: 10px 0;
+   background: #000; 
+    border-bottom: 3px double #00ff00; /* Systemowa linia oddzielająca */
+    padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 100;
+    margin-bottom: 20px;
 }
 
 nav ul {
@@ -110,21 +108,23 @@ nav a:hover {
     color: #00ff00;
 }
 
-/* Odstępy między sekcjami */
-section {
-    padding: 60px 0;
+.nav-link {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #00ff00;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-family: 'Courier New', monospace;
 }
 
-hr {
-    border: 0;
-    border-top: 2px dashed #00ff00;
+.nav-link:hover {
+    box-shadow: 0 0 10px #00ff00; 
 }
 
-
+/* =========================================
+   4. PRZYCISKI I ELEMENTY RETRO
+   ========================================= */
 .retro-btn {
-
-
-
     background-color: #000;
     color: #00ff00;
     border: 2px solid #00ff00;
@@ -146,23 +146,41 @@ hr {
     box-shadow: 2px 2px 0px #005500;
     transform: translate(2px, 2px);
 }
-/* navbar buttons*/
-.nav-link {
 
-    color: #000;
-    text-decoration: none;
-    border: 1px solid #00ff00;
-    padding: 5px 10px;
-    margin: 0 5px;
-    font-family: 'Courier New', monospace;
+.menu-btn {
+    background-color: #000;
+    color: #00ff00;
+    border: 3px double #00ff00; 
+    font-family: 'VT323', monospace;
+    padding: 15px;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    text-align: left; 
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
 }
 
-.nav-link:hover {
-    box-shadow: 0 0 10px #00ff00; 
+/* Dekoracyjny element */
+.menu-btn::after {
+    content: " [SYSTEM_MENU_v1.0]";
+    font-size: 0.7rem;
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    opacity: 0.7;
+}
+
+
+.menu-btn:hover, .menu-btn:active {
+    background-color: #00ff00;
+    color: #000;
+    text-shadow: none;
 }
 
 .socials {
-
     color: white;
     text-decoration: none;
     border: 1px solid #00ff00;
@@ -171,33 +189,29 @@ hr {
     font-family: 'Courier New', monospace;
 }
 
-body::before {
-    content: " ";
-    display: block;
-    position: fixed;
-    top: 0; left: 0; bottom: 0; right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
-                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-    z-index: 2;
-    background-size: 100% 4px, 3px 100%;
-    pointer-events: none;
+
+hr {
+    border: 0;
+    border-top: 2px dashed #00ff00;
 }
 
-
-body {
-    background-color: #0b0d02;
-    color: #39ff14;
-    font-family: 'VT323', monospace;
-    text-shadow: 0 0 5px rgba(57, 255, 20, 0.7), 0 0 10px rgba(57, 255, 20, 0.5);
-    font-size: 1.5rem;
+section {
+    padding: 60px 0;
 }
 
-
+/* =========================================
+   5. PROJEKTY I OBRAZY
+   ========================================= */
 .project-layout {
     display: flex;
     gap: 20px;
     flex-wrap: wrap; /* Na telefonach zdjęcie będzie nad tekstem */
     align-items: flex-start;
+}
+
+.project-image {
+    position: relative;
+    z-index: 5; 
 }
 
 .project-image img {
@@ -212,16 +226,10 @@ body {
     margin: 0 5px;
 }
 
-.project-image {
-    position: relative;
-    z-index: 5; 
-}
-
 .project-image img:hover {
     border-color: #ffffff;
     cursor: zoom-in;      /* Zmiana kursora na lupę */
     transform: scale(1.02);
-    
 }
 
 .tech-stack {
@@ -233,37 +241,71 @@ body {
     font-family: 'Courier New', monospace;
 }
 
-
 .project-links {
     margin-top: 20px;
 }
 
+#random-frog {
+    max-width: 100%;          
+    height: auto;             
+     border: 2px solid #00ff00;
+    display: block;           
+}
 
-/* Style dla telefonów i tabletów */
+/* =========================================
+   6. STOPKA
+   ========================================= */
+footer.section-box {
+    clear: both;          
+    width: 100%;          
+    box-sizing: border-box; 
+    margin-top: 20px;     
+    text-align: center;   
+}
+
+/* =========================================
+   7. RESPONSYWNOŚĆ I MOBILE
+   ========================================= */
+#menu-toggle {
+    display: none;
+}
+
 @media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column; 
-    }
-
     .project-image img {
         max-width: 90%;      
         margin: 0 auto;      
         display: block;       
     }
 
-
     .project-layout {
         justify-content: center; 
     }
 
     .tech-stack {
-        padding-left: 15px;   /* Zmniejszenie wcięcia na małym ekranie, by tekst nie był ściśnięty */
+        padding-left: 15px;   /* Zmniejszenie wcięcia na małym ekranie */
         font-size: 1rem;      
     }
 
     .side-panel {
-        width: 100%; 
-        order: 2;    
+        width: 100% !important; /* Zajmuje całą szerokość telefonu */
+        padding: 0;             
+        margin: 0 auto;         /* Centrujemy kontener */
+        align-items: center;    
+    }
+
+    .side-panel .section-box {
+        width: 90%;             
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box; /* Zapobiega wypychaniu ramek przez padding */
+    }
+
+    .content-wrapper {
+        flex-direction: column; 
+         width: 100% !important; 
+        padding: 0;             
+        margin: 0 auto;         /* Centrujemy kontener */
+        align-items: center;    
     }
 
     main {
@@ -271,15 +313,27 @@ body {
         order: 1;    /* Treść główna będzie pierwsza na telefonie */
     }
 
-    
-    nav ul {
-        flex-direction: column; /* Menu w pionie */
-        align-items: center;
-        gap: 10px;
-    }
-
     body {
         font-size: 1.2rem; 
     }
-}
 
+   #menu-toggle {
+        display: block; /* Pokazuje nową klasę .menu-btn */
+        margin: 0;      /* Usuwamy marginesy, by przycisk wypełnił górę */
+        border-radius: 0; /* Bardziej surowy, systemowy wygląd */
+    }
+
+    #nav-list {
+        display: none; /* Domyślnie ukrywamy listę linków */
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background: #000;
+        border: 1px solid #00ff00;
+        padding: 10px 0;
+    }
+
+    #nav-list.active {
+        display: flex; 
+    }
+}

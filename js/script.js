@@ -1,3 +1,17 @@
+
+// Czekamy, aż cała strona się załaduje
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const navList = document.getElementById('nav-list');
+
+    if (menuToggle && navList) {
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active'); // Przełącza klasę widoczności
+        });
+    }
+});
+
+
 const frogs = [
     { name: "Żaba kapelusznik!", file: "../assets/frogs/f1.jpg" },
     { name: "Wallace's flying frog!", file: "../assets/frogs/f2.jpg" },
@@ -13,3 +27,4 @@ function pickFrog() {
     document.getElementById('random-frog').src = frog.file;
     document.getElementById('frog-name').innerText = "Twój patron: " + frog.name;
 }
+
