@@ -314,13 +314,23 @@ footer.section-box {
     }
 
     body {
-        font-size: 1.2rem; 
+  
+        color: #26d911; 
+        
+        text-shadow: 0 0 2px rgba(57, 255, 20, 0.4); 
+        
+        font-size: 1.1rem; 
+    }
+    
+    .section-box h1, .section-box h2, .section-box h3 {
+        color: #2ecc71; 
+        text-shadow: none; 
     }
 
    #menu-toggle {
-        display: block; /* Pokazuje nową klasę .menu-btn */
-        margin: 0;      /* Usuwamy marginesy, by przycisk wypełnił górę */
-        border-radius: 0; /* Bardziej surowy, systemowy wygląd */
+        display: block; 
+        margin: 0;      
+        border-radius: 0; 
     }
 
     #nav-list {
