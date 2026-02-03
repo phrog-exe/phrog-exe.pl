@@ -10,14 +10,15 @@ html {
 
 
 .case-file {
-    max-width: 700px;
-    margin: 0 auto;
-    position: relative;
+    max-width: 800px; 
+    margin: 40px auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
 }
 
-/* Styl "pieczątki" */
 .double-border h3 {
-    margin-top: -25px; /* Wyciąga nagłówek na ramkę */
+    margin-top: -25px; 
     margin-left: -5px;
     font-size: 1.2rem;
     box-shadow: 3px 3px 0px #005500;
@@ -30,10 +31,9 @@ html {
 }
 
 
-/* Styl cenzury - czarny blok zasłaniający tekst */
 .censored-text {
-    background-color: #39ff14; /* Kolor Twojej zieleni */
-    color: #39ff14;            /* Tekst ma ten sam kolor co tło, by był niewidoczny */
+    background-color: #39ff14; 
+    color: #39ff14;           
     cursor: help;
     transition: all 0.3s ease;
     padding: 0 4px;
@@ -41,8 +41,9 @@ html {
 
 /* Efekt po najechaniu - tekst staje się widoczny */
 .censored-text:hover {
-    background-color: transparent; /* Pasek znika */
-    color: white;                  /* Imię staje się białe i czytelne */
+    background-color: transparent; 
+    color: white;                  
+
 }
 
 
