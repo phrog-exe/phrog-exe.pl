@@ -7,6 +7,45 @@ html {
     cursor: url(http://www.rw-designer.com/cursor-extern.php?id=177321), auto;
 }
 
+
+
+.case-file {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Styl "pieczątki" */
+.double-border h3 {
+    margin-top: -25px; /* Wyciąga nagłówek na ramkę */
+    margin-left: -5px;
+    font-size: 1.2rem;
+    box-shadow: 3px 3px 0px #005500;
+}
+
+/* Efekt "wyciętego" tekstu w niektórych miejscach */
+.case-file p span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* Styl cenzury - czarny blok zasłaniający tekst */
+.censored-text {
+    background-color: #39ff14; /* Kolor Twojej zieleni */
+    color: #39ff14;            /* Tekst ma ten sam kolor co tło, by był niewidoczny */
+    cursor: help;
+    transition: all 0.3s ease;
+    padding: 0 4px;
+}
+
+/* Efekt po najechaniu - tekst staje się widoczny */
+.censored-text:hover {
+    background-color: transparent; /* Pasek znika */
+    color: white;                  /* Imię staje się białe i czytelne */
+}
+
+
 body {
     background-color: #0b0d02;
     color: #39ff14;
