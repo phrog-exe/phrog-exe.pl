@@ -1,46 +1,5 @@
-/* =========================================
-   1. IMPORTY I GLOBALNE (HTML, BODY)
-   ========================================= */
+/* 1. IMPORTY I ZMIENNE GLOBALNE */
 @import url('https://fonts.googleapis.com/css2?family=VT323&family=Inconsolata:wght@400;700&display=swap');
-
-
-.case-file {
-    max-width: 800px; 
-    margin: 40px auto; 
-    display: flex;
-    flex-direction: column;
-    gap: 20px; 
-}
-
-.double-border h3 {
-    margin-top: -25px; 
-    margin-left: -5px;
-    font-size: 1.2rem;
-    box-shadow: 3px 3px 0px #005500;
-}
-
-/* Efekt "wyciętego" tekstu w niektórych miejscach */
-.case-file p span {
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-
-.censored-text {
-    background-color: #39ff14; 
-    color: #39ff14;           
-    cursor: help;
-    transition: all 0.3s ease;
-    padding: 0 4px;
-}
-
-/* Efekt po najechaniu - tekst staje się widoczny */
-.censored-text:hover {
-    background-color: transparent; 
-    color: white;                  
-
-}
-
 
 body {
     background-color: #0b0d02;
@@ -48,13 +7,19 @@ body {
     font-family: 'VT323', monospace;
     text-shadow: 0 0 5px rgba(57, 255, 20, 0.7), 0 0 10px rgba(57, 255, 20, 0.5);
     font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
 }
 
+/* Efekt skanowania CRT */
 body::before {
     content: " ";
     display: block;
     position: fixed;
-    top: 0; left: 0; bottom: 0; right: 0;
+    top: 0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
     background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
                 linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
     z-index: 2;
@@ -62,58 +27,102 @@ body::before {
     pointer-events: none;
 }
 
-/* =========================================
-   2. KONTENERY I UKŁAD (LAYOUT)
-   ========================================= */
+/* 2. UKŁAD I KONTENERY (LAYOUT)*/
 #main-container {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
-}
-
-#main-container {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
 
 .content-wrapper {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-}
-
-.content-wrapper {
     display: flex;
     gap: 20px;
 }
 
 main {
-    flex: 3; /* Szersza treść główna */
+    flex: 3;
 }
 
 .section-box {
-    border: 2px solid #00ff00; 
+    border: 2px solid #00ff00;
     background-color: #000;
     margin-bottom: 20px;
     padding: 15px;
-    box-shadow: 6px 6px 0px #005500; 
+    box-shadow: 6px 6px 0px #005500;
 }
 
 .side-panel {
     display: flex;
-    flex-direction: column;  
-    align-items: center;      
-    justify-content: center;  
-    text-align: center;       
-    gap: 15px;                
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
 }
 
-/* =========================================
-   3. NAWIGACJA (NAV)
-   ========================================= */
+/*3. SYSTEM "AKT SPRAWY" (CASE FILES) */
+.case-file {
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.case-header {
+    text-align: center;
+    background: #111;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.case-file p span {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.double-border h3 {
+    margin-top: -25px;
+    margin-left: -5px;
+    font-size: 1.2rem;
+    box-shadow: 3px 3px 0px #005500;
+}
+
+.operational-stamp {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #000;
+    background: #00ffff;
+    display: inline-block;
+    padding: 2px 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.censored-text {
+    background-color: #39ff14;
+    color: #39ff14;
+    cursor: help;
+    transition: all 0.3s ease;
+    padding: 0 4px;
+}
+
+.censored-text:hover {
+    background-color: transparent;
+    color: white;
+}
+
+/*4. NAWIGACJA (NAV) */
 nav {
-   background: #000; 
-    border-bottom: 3px double #00ff00; /* Systemowa linia oddzielająca */
+    background: #000;
+    border-bottom: 3px double #00ff00;
     padding: 15px 0;
     position: sticky;
     top: 0;
@@ -153,12 +162,10 @@ nav a:hover {
 }
 
 .nav-link:hover {
-    box-shadow: 0 0 10px #00ff00; 
+    box-shadow: 0 0 10px #00ff00;
 }
 
-/* =========================================
-   4. PRZYCISKI I ELEMENTY RETRO
-   ========================================= */
+/*5. PRZYCISKI I ELEMENTY INTERAKTYWNE */
 .retro-btn {
     background-color: #000;
     color: #00ff00;
@@ -169,8 +176,8 @@ nav a:hover {
     text-transform: uppercase;
     cursor: pointer;
     box-shadow: 4px 4px 0px #005500;
-    text-decoration: none; 
-    display: inline-block; /* Pozwala linkom mieć marginesy i dopełnienie */
+    text-decoration: none;
+    display: inline-block;
     margin: 5px;
     transition: all 0.2s;
 }
@@ -185,12 +192,12 @@ nav a:hover {
 .menu-btn {
     background-color: #000;
     color: #00ff00;
-    border: 3px double #00ff00; 
+    border: 3px double #00ff00;
     font-family: 'VT323', monospace;
     padding: 15px;
     font-size: 1.6rem;
     letter-spacing: 2px;
-    text-align: left; 
+    text-align: left;
     cursor: pointer;
     width: 100%;
     display: block;
@@ -198,7 +205,6 @@ nav a:hover {
     overflow: hidden;
 }
 
-/* Dekoracyjny element */
 .menu-btn::after {
     content: " [SYSTEM_MENU_v1.0]";
     font-size: 0.7rem;
@@ -207,7 +213,6 @@ nav a:hover {
     bottom: 5px;
     opacity: 0.7;
 }
-
 
 .menu-btn:hover, .menu-btn:active {
     background-color: #00ff00;
@@ -224,46 +229,33 @@ nav a:hover {
     font-family: 'Courier New', monospace;
 }
 
-
-hr {
-    border: 0;
-    border-top: 2px dashed #00ff00;
-}
-
-section {
-    padding: 60px 0;
-}
-
-/* =========================================
-   5. PROJEKTY I OBRAZY
-   ========================================= */
+/*6. PROJEKTY I MULTIMEDIA*/
 .project-layout {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Na telefonach zdjęcie będzie nad tekstem */
+    flex-wrap: wrap;
     align-items: flex-start;
 }
 
 .project-image {
     position: relative;
-    z-index: 5; 
+    z-index: 5;
 }
 
 .project-image img {
-   max-width: 600px; 
-    width: auto;      
-    height: auto;     
-    display: block;   
-    image-rendering: auto; 
-
-     border: 1px solid #00ff00;
+    max-width: 600px;
+    width: auto;
+    height: auto;
+    display: block;
+    image-rendering: auto;
+    border: 1px solid #00ff00;
     padding: 5px 10px;
     margin: 0 5px;
 }
 
 .project-image img:hover {
     border-color: #ffffff;
-    cursor: zoom-in;      /* Zmiana kursora na lupę */
+    cursor: zoom-in;
     transform: scale(1.02);
 }
 
@@ -271,7 +263,7 @@ section {
     list-style: ">> ";
     padding-left: 50px;
     margin: 15px 0;
-     color: white;
+    color: white;
     text-decoration: none;
     font-family: 'Courier New', monospace;
 }
@@ -281,95 +273,97 @@ section {
 }
 
 #random-frog {
-    max-width: 100%;          
-    height: auto;             
-     border: 2px solid #00ff00;
-    display: block;           
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #00ff00;
+    display: block;
 }
 
-/* =========================================
-   6. STOPKA
-   ========================================= */
+/* 7. ELEMENTY DEKORACYJNE I STOPKA*/
+hr {
+    border: 0;
+    border-top: 2px dashed #00ff00;
+}
+
+section {
+    padding: 60px 0;
+}
+
 footer.section-box {
-    clear: both;          
-    width: 100%;          
-    box-sizing: border-box; 
-    margin-top: 20px;     
-    text-align: center;   
+    clear: both;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 20px;
+    text-align: center;
 }
 
-/* =========================================
-   7. RESPONSYWNOŚĆ I MOBILE
-   ========================================= */
+/*  8. RESPONSYWNOŚĆ (MOBILE) */
 #menu-toggle {
     display: none;
 }
 
 @media (max-width: 768px) {
+    body {
+        color: #26d911;
+        text-shadow: 0 0 2px rgba(57, 255, 20, 0.4);
+        font-size: 1.1rem;
+    }
+
+    .section-box h1, .section-box h2, .section-box h3 {
+        color: #2ecc71;
+        text-shadow: none;
+    }
+
     .project-image img {
-        max-width: 90%;      
-        margin: 0 auto;      
-        display: block;       
+        max-width: 90%;
+        margin: 0 auto;
+        display: block;
     }
 
     .project-layout {
-        justify-content: center; 
+        justify-content: center;
     }
 
     .tech-stack {
-        padding-left: 15px;   /* Zmniejszenie wcięcia na małym ekranie */
-        font-size: 1rem;      
+        padding-left: 15px;
+        font-size: 1rem;
     }
 
     .side-panel {
-        width: 100% !important; /* Zajmuje całą szerokość telefonu */
-        padding: 0;             
-        margin: 0 auto;         /* Centrujemy kontener */
-        align-items: center;    
+        width: 100% !important;
+        padding: 0;
+        margin: 0 auto;
+        align-items: center;
     }
 
     .side-panel .section-box {
-        width: 90%;             
+        width: 90%;
         margin-left: auto;
         margin-right: auto;
-        box-sizing: border-box; /* Zapobiega wypychaniu ramek przez padding */
+        box-sizing: border-box;
     }
 
     .content-wrapper {
-        flex-direction: column; 
-         width: 100% !important; 
-        padding: 0;             
-        margin: 0 auto;         /* Centrujemy kontener */
-        align-items: center;    
+        flex-direction: column;
+        width: 100% !important;
+        padding: 0;
+        margin: 0 auto;
+        align-items: center;
     }
 
     main {
         width: 100%;
-        order: 1;    /* Treść główna będzie pierwsza na telefonie */
+        order: 1;
     }
 
-    body {
-  
-        color: #26d911; 
-        
-        text-shadow: 0 0 2px rgba(57, 255, 20, 0.4); 
-        
-        font-size: 1.1rem; 
-    }
-    
-    .section-box h1, .section-box h2, .section-box h3 {
-        color: #2ecc71; 
-        text-shadow: none; 
-    }
-
-   #menu-toggle {
-        display: block; 
-        margin: 0;      
-        border-radius: 0; 
+    #menu-toggle {
+        display: block;
+        margin: 0;
+        border-radius: 0;
     }
 
     #nav-list {
-        display: none; /* Domyślnie ukrywamy listę linków */
+        display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
@@ -379,6 +373,6 @@ footer.section-box {
     }
 
     #nav-list.active {
-        display: flex; 
+        display: flex;
     }
 }

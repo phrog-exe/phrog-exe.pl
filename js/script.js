@@ -36,3 +36,32 @@ function pickFrog() {
     document.getElementById('random-frog').src = frog.file;
     document.getElementById('frog-name').innerText = "Twój patron: " + frog.name;
 }
+
+// ----------------------------------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".contact-form");
+
+    if (form) { 
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const data = new FormData(event.target);
+            
+            try {
+                const response = await fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    alert("TRANSMISSION_SUCCESSFUL: Wiadomość wysłana.");
+                    form.reset();
+                } else {
+                    alert("CRITICAL_ERROR: Serwer odrzucił transmisję.");
+                }
+            } catch (error) {
+                alert("CONNECTION_LOST: Błąd połączenia z bazą danych.");
+            }
+        });
+    }
+});

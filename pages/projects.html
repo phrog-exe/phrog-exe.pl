@@ -3,71 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phrog.exe | Digital garden</title>
-    
+    <title>Phrog.exe | Operational Logs</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../phrog.gif" type="image/gif">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-
-
-    
-    <main class="h-card"> <h1 class="p-name">Welcome to phrog-exe.pl</h1>
-        <p class="p-note">Website under construction!</p>
-        
-    </main>
-
-    <nav>
+<nav>
     <button id="menu-toggle" class="menu-btn">ACCESS_MENU_</button>
     <ul id="nav-list">
-        <li><a href="../index.html"class="nav-link">Home</a></li>
-         <li><a href="about.html"class="nav-link">About Me</a></li>
-         <li><a href="projects.html"class="nav-link">Projects</a></li>
-         <li><a href="contact.html"class="nav-link">Contact</a></li>
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About Me</a></li>
+        <li><a href="projects.html" class="nav-link">Projects</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
     </ul>
 </nav>
 
-
- 
-
-<section class="section-box project-entry">
-    <h2>🐸 Cloud Infrastructure: Dockerized WordPress Environment</h2>
-    
-    <div class="project-layout">
-        <div class="project-image">
-    <a href="\assets\projects\projekt1.png" target="_blank">
-        <img src="\assets\projects\projekt1.png" alt="Screen projektu">
-    </a>
-</div>
+<main id="main-container">
+    <div class="case-file">
         
-        <div class="project-info">
-            <h3>O projekcie:</h3>
-            <p>Projekt polegał na przygotowaniu i wdrożeniu gotowej do pracy platformy CMS w chmurze Google Cloud Platform przy użyciu Dockera.</p>
+       <header class="section-box double-border case-header" style="text-align: center; background: #111;
+   
+">
+    <h1 style="margin: 0;">LOG_FILES // OPERATIONAL_PROJECTS</h1>
+    
+    <p  style="font-size: 0.9rem; color: #000; background: #00ffff; display: inline-block; padding: 2px 15px; margin-top: 10px; font-weight: bold;">
+        [ CLASSIFICATION: TECH_STREAMS // STATUS: ACTIVE ]
+    </p>
+</header>
+
+        <section class="section-box double-border">
+            <h3 style="background: #00ff00; color: #000; display: inline-block; padding: 2px 10px;">PROJECT_01: CLOUD_INFRASTRUCTURE</h3>
             
-            <ul class="tech-stack">
-                
-                <li><strong>Orkiestracja mikroserwisów:</strong> Połączenie WordPressa, bazy danych MySQL i panelu phpMyAdmin w jedną, współpracującą sieć wewnątrz Dockera.</li>
-                <li><strong>Wdrożenie Cloud (GCP):</strong> Samodzielna konfiguracja instancji serwera, zarządzanie zaporą sieciową (Firewall) i przypisanie publicznego adresu IP.</li>
-                <li><strong>Automatyzacja wdrożenia:</strong> Przygotowanie skryptu docker-compose.yml, który pozwala postawić całe środowisko na dowolnym serwerze jedną komendą.</li>
-                <li><strong>Zarządzanie konfiguracją:</strong> Wykorzystanie zmiennych środowiskowych do bezpiecznego łączenia usług wewnątrz chmury.</li>
-                <li><strong>Technologie:</strong> Docker, Docker Compose, MySQL, GCP (Compute Engine), Git.</li>
-            </ul>
+            <div class="project-layout" style="margin-top: 15px;">
+                <div class="project-info">
+                    <p style="color: white; line-height: 1.6;">
+                        > <span style="color: #00ff00;">OBJECTIVE:</span> Wdrożenie skalowalnej platformy CMS w chmurze Google Cloud (GCP).<br>
+                        > <span style="color: #00ff00;">METHOD:</span> Orkiestracja mikroserwisów (WordPress + MySQL + phpMyAdmin) przy użyciu Docker Compose.<br>
+                        > <span style="color: #00ff00;">STRIKE_TEAM:</span> Samodzielna konfiguracja instancji i zapory sieciowej (Firewall).<br>
+                        > <span style="color: #00ff00;">TECH_STACK:</span> DOCKER, GCP_COMPUTE_ENGINE, MYSQL, GIT.<br>
+                    </p>
+                    
+                    <div class="project-links" style="margin-top: 20px;">
+                        <a href="https://github.com/phrog-exe/Przetwarzanie-rozproszone" class="nav-link" target="_blank" style="font-size: 0.8rem; border: 1px solid #00ff00; padding: 5px 10px;">[ SOURCE_CODE ]</a>
+                        <a href="http://34.171.210.147" class="nav-link" target="_blank" style="font-size: 0.8rem; border: 1px solid #00ff00; padding: 5px 10px;">[ LIVE_LINK ]</a>
+                    </div>
+                </div>
 
-            <div class="project-links">
-                <a href="https://github.com/phrog-exe/Przetwarzanie-rozproszone" class="retro-btn" target="_blank">Kod źródłowy</a>
-                <a href="http://34.171.210.147" class="retro-btn" target="_blank">Link</a>
+                <div class="project-image" style="margin-top: 20px; display: flex; justify-content: center; width: 100%;">
+                    <a href="../assets/projects/projekt1.png" target="_blank">
+                        <img src="../assets/projects/projekt1.png" alt="System Logs" style="width: 100%; filter: grayscale(50%) sepia(20%) hue-rotate(80deg);">
+                    </a>
+                </div>
             </div>
-        </div>
+        </section>
+
+        
+
     </div>
-</section>
+</main>
 
-
-  </section>
-  
-
-
-    <script src="../js/script.js"></script>
+<script src="../js/script.js"></script>
 </body>
 </html>
