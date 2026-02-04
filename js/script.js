@@ -14,10 +14,19 @@ document.addEventListener('DOMContentLoaded', () => {
 // losowanie żab
 const frogs = [
     { name: "Żaba kapelusznik!", file: "../assets/frogs/f1.jpg" },
-    { name: "Wallace's flying frog!", file: "../assets/frogs/f2.jpg" },
-    { name: "Żaba Moczarowa", file: "../assets/frogs/f3.jpg" },
-    { name: "Pumpkin toadlet - tiny frog!", file: "../assets/frogs/f4.jpg" },
-    { name: "Painted reed frog!", file: "../assets/frogs/f5.jpg" }
+    { name: "Żaba czekająca na paczkę z Temu!", file: "../assets/frogs/f6.jpg" },
+    { name: "Żaba księżniczka!", file: "../assets/frogs/f7.jpg" },
+    { name: "Żabka wiedźma!", file: "../assets/frogs/f8.jpg" },
+    { name: "Żabka gentleman!", file: "../assets/frogs/f9.jpg" },
+    { name: "Kowojska żabka!", file: "../assets/frogs/f10.jpg" },
+    { name: "Żabka wróżka grająca serenadę!", file: "../assets/frogs/f11.jpg" },
+    { name: "Żabka kąpielowa!", file: "../assets/frogs/f12.jpg" },
+    { name: "Żabka skater!", file: "../assets/frogs/f13.jpg" },
+    { name: "Żabalarz!", file: "../assets/frogs/f14.jpg" },
+    { name: "Żabka urodzinowa!", file: "../assets/frogs/f15.jpg" },
+    { name: "Żabka grająca w lola!", file: "../assets/frogs/f16.jpg" },
+    { name: "Żaba skoczek!", file: "../assets/frogs/skok.gif" },
+    { name: "Żaba tancerz!", file: "../assets/frogs/taniec.gif" },
 ];
 
 function pickFrog() {
