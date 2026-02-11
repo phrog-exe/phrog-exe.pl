@@ -18,7 +18,7 @@ const frogs = [
     { name: "Żaba księżniczka!", file: "../assets/frogs/f7.jpg" },
     { name: "Żabka wiedźma!", file: "../assets/frogs/f8.jpg" },
     { name: "Żabka gentleman!", file: "../assets/frogs/f9.jpg" },
-    { name: "Kowojska żabka!", file: "../assets/frogs/f10.jpg" },
+    { name: "Kowbojska żabka!", file: "../assets/frogs/f10.jpg" },
     { name: "Żabka wróżka grająca serenadę!", file: "../assets/frogs/f11.jpg" },
     { name: "Żabka kąpielowa!", file: "../assets/frogs/f12.jpg" },
     { name: "Żabka skater!", file: "../assets/frogs/f13.jpg" },
@@ -65,3 +65,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+// ---------------------------------------------------------------------------------------
+function toggleLogs() {
+    const logContainer = document.getElementById("philips-logs-container");
+    if (logContainer.style.display === "none") {
+        logContainer.style.display = "block";
+        // Opcjonalnie: przewinięcie widoku do logów
+        logContainer.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        logContainer.style.display = "none";
+    }
+}
