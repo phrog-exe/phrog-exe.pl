@@ -5,7 +5,7 @@ function About() {
     {
       id: 1,
       date: '2023 – 2027',
-      title: 'Studia — Informatyka w Gdańsku',
+      title: 'Studia - Informatyka w Gdańsku',
       subtitle: 'WSB Merito Gdańsk · Inżynieria oprogramowania',
       desc: 'Studia inżynierskie na kierunku Informatyka. Uczę się programowania obiektowego, baz danych i inżynierii oprogramowania — teorię staram się od razu przekuwać w praktyczne projekty.',
       status: 'in_progress'
@@ -79,7 +79,7 @@ function About() {
             </div>
             <div style={{ display: 'flex', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '8px' }}>
               <span style={{ color: 'var(--accent-emerald)', fontFamily: 'var(--font-mono)', fontSize: '0.85rem', width: '130px', flexShrink: 0 }}>&gt; Fokus:</span>
-              <span style={{ fontSize: '0.9rem', color: 'var(--text-main)' }}>Backend, DevOps, sieci domowe</span>
+              <span style={{ fontSize: '0.9rem', color: 'var(--text-main)' }}>Backend, DevOps, Home labbing</span>
             </div>
             <div style={{ display: 'flex', borderBottom: '1px solid rgba(255,255,255,0.05)', paddingBottom: '8px' }}>
               <span style={{ color: 'var(--accent-emerald)', fontFamily: 'var(--font-mono)', fontSize: '0.85rem', width: '130px', flexShrink: 0 }}>&gt; Języki:</span>
@@ -107,9 +107,9 @@ function About() {
               <span style={{ color: 'var(--text-muted)' }}>Dostępność:</span>
               <span style={{ color: 'var(--accent-emerald)', fontWeight: 600 }}>od zaraz</span>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.04)', paddingBottom: '6px', marginBottom: '6px' }}>
-              <span style={{ color: 'var(--text-muted)' }}>Forma:</span>
-              <span style={{ color: 'var(--accent-emerald)', fontWeight: 600 }}>zdalna / hybryda / stacjonarnie na terenie Trójmiasta</span>
+            <div style={{ display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid rgba(255,255,255,0.04)', paddingBottom: '6px', marginBottom: '6px', gap: '10px' }}>
+              <span style={{ color: 'var(--text-muted)', flexShrink: 0 }}>Forma:</span>
+              <span style={{ color: 'var(--accent-emerald)', fontWeight: 600, textAlign: 'right' }}>zdalna / hybryda / Trójmiasto</span>
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <span style={{ color: 'var(--text-muted)' }}>GitHub:</span>

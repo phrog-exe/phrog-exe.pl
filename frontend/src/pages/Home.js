@@ -176,12 +176,12 @@ function Home() {
               Postęp: <span style={{ color: 'var(--accent-emerald)', fontWeight: 600 }}>95% ukończone</span>
             </span>
             <span style={{ color: 'var(--accent-purple)' }}>
-              React + FastAPI + SQLite — działa i to mi wystarczy 😄
+              React + FastAPI + SQLite 
             </span>
           </div>
         </div>
 
-        {/* SEKCJA 5: ELEGANCKIE SOCIALS */}
+        {/* SEKCJA 5: SOCIALS */}
         <div style={{ textAlign: 'center' }}>
           <h3 style={{ 
             color: 'var(--accent-emerald)', 

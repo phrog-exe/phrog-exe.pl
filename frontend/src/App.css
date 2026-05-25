@@ -498,57 +498,97 @@ footer.section-box {
     }
 
     .content-wrapper {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 20px;
+    }
+
+    /* Ustawienia responsywnych kart i usuwanie sztywnych paddingów */
+    .section-box {
+        padding: 22px 16px !important;
+        border-radius: 14px;
+        margin-bottom: 20px;
+    }
+
+    main.section-box {
+        min-height: auto !important; /* Pozwala na płynne dopasowanie wysokości na komórkach */
+        padding: 25px 16px !important;
     }
 
     .side-panel {
         width: 100% !important;
+        box-sizing: border-box;
     }
 
+    /* Futurystyczna Nawigacja Mobilna (Sliding Glass Overlay) */
     nav {
-        border-radius: 16px;
-        padding: 5px 15px;
+        border-radius: 12px;
+        padding: 4px 12px;
         top: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
+        background: rgba(8, 12, 24, 0.85); /* Ciemniejsze tło na komórce dla kontrastu */
+        position: relative; /* Sprawia, że absolute pozycjonowanie dropdowna odnosi się do nav */
     }
 
     #menu-toggle {
-        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         background-color: transparent;
         color: var(--accent-emerald);
         border: none;
         font-family: var(--font-mono);
-        padding: 10px;
-        font-size: 1.1rem;
-        font-weight: bold;
-        letter-spacing: 1px;
+        padding: 12px 6px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        letter-spacing: 0.8px;
         cursor: pointer;
         width: 100%;
         text-align: left;
         position: relative;
+        text-shadow: 0 0 8px rgba(0, 255, 102, 0.25);
     }
 
     #menu-toggle::after {
-        content: " [MENU]";
-        font-size: 0.75rem;
-        position: absolute;
-        right: 15px;
-        top: 13px;
-        opacity: 0.7;
+        content: "[ SYS_NAV ]";
+        font-size: 0.72rem;
+        color: var(--accent-purple);
+        font-family: var(--font-mono);
+        border: 1px solid rgba(191, 90, 242, 0.25);
+        background: rgba(191, 90, 242, 0.04);
+        padding: 3px 8px;
+        border-radius: 6px;
+        transition: all 0.25s ease;
     }
 
+    nav.active-nav #menu-toggle::after {
+        content: "[ CLOSE_X ]";
+        color: #ff4444;
+        border-color: rgba(255, 68, 68, 0.35);
+        background: rgba(255, 68, 68, 0.06);
+        box-shadow: 0 0 10px rgba(255, 68, 68, 0.1);
+    }
+
+    /* Pływający szklany dropdown nakładający się na treść strony (bez rozpychania) */
     #nav-list {
         display: none;
         flex-direction: column;
-        width: 100%;
+        width: calc(100% + 2px); /* Idealnie pokrywa obramowanie nav */
         text-align: center;
-        background: var(--bg-primary);
+        background: rgba(4, 7, 17, 0.96);
+        backdrop-filter: blur(25px);
+        -webkit-backdrop-filter: blur(25px);
         border: 1px solid var(--border-color);
-        border-radius: 12px;
-        padding: 15px 0;
-        gap: 15px;
-        margin-top: 10px;
+        border-top: none;
+        border-radius: 0 0 14px 14px;
+        padding: 18px 0;
+        gap: 12px;
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        right: -1px;
+        z-index: 1000;
+        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.75), 0 0 20px rgba(0, 255, 102, 0.02);
+        animation: slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
     #nav-list.active {
@@ -563,7 +603,32 @@ footer.section-box {
         display: block;
         width: 80%;
         margin: 0 auto;
-        padding: 8px 0;
+        padding: 9px 0;
+        border-radius: 12px;
+        font-size: 0.92rem;
+    }
+
+    /* Poprawki formularza i innych kart dla ekranów komórek */
+    form {
+        gap: 14px !important;
+    }
+
+    /* Dostosowanie nagłówków sekcji */
+    .case-header h1 {
+        font-size: 1.55rem !important;
+        text-align: center;
+    }
+}
+
+/* Animacja rozwijania menu */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 

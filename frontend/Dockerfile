@@ -5,8 +5,8 @@ WORKDIR /app
 # Kopiowanie plików zależności
 COPY package*.json ./
 
-# Instalowanie zależności (używamy npm ci dla czystej, powtarzalnej instalacji)
-RUN npm ci
+# Instalowanie zależności (dodajemy --legacy-peer-deps dla kompatybilności React 19 z react-scripts)
+RUN npm install --legacy-peer-deps
 
 # Kopiowanie reszty plików źródłowych frontendu
 COPY . .

@@ -344,7 +344,7 @@ function App() {
       <div className="mouse-glow" style={{ left: mousePos.x, top: mousePos.y }}></div>
 
       <div id="main-container">
-        <nav>
+        <nav className={navActive ? 'active-nav' : ''}>
           <button 
             id="menu-toggle" 
             className="menu-btn"
