@@ -207,36 +207,37 @@ END OF SPECIFICATION - 2026_EDITION
       id: 6,
       title: "PROJECT_06: DUNGEON_ARCHITECT",
       objective: "Budowa desktopowego narzędzia do proceduralnego generowania lochów i labiryntów dla gier roguelike.",
-      method: "Implementacja w języku C# autorskiego algorytmu podziału przestrzeni (BSP - Binary Space Partitioning) połączonego z algorytmem błądzenia losowego (Random Walk).",
-      strike_team: "Samodzielny projekt desktopowy. Oprogramowałam pełną logikę generowania pokoi, korytarzy oraz optymalizację renderowania siatki 2D.",
-      tech_stack: "C_SHARP, NET_CORE, PROCEDURAL_GENERATION, BSP_ALGORITHM, GAME_DEV",
+      method: "Implementacja w języku C# algorytmu błądzenia losowego (Random Walk / Agent-Based Generation) w środowisku WPF (.NET Core). Aplikacja generuje lochy w czasie rzeczywistym z animacją powstawania kroków, automatycznie wyznacza kafelki Entrance i Exit, oraz umożliwia bezpośredni eksport wygenerowanego lochu jako plik PNG na pulpit.",
+      strike_team: "Samodzielny projekt desktopowy. Zaprojektowałam minimalistyczny, ciemny interfejs graficzny w XAML/WPF (stylistyka zinc/dark modern) i zoptymalizowałam eksport za pomocą klasy RenderTargetBitmap.",
+      tech_stack: "C_SHARP, WPF, DOTNET_CORE, RANDOM_WALK, XAML, PNG_EXPORT",
       source_code: "https://github.com/phrog-exe/Dungeon-architect",
       live_link: "",
-      image_url: "/assets/projects/projekt6.png",
+      image_url: "/assets/projects/projekt6.gif",
       status: "ACTIVE",
       view_logs: `============================================================
-PROJECT: DUNGEON_ARCHITECT_V1.0
-ENVIRONMENT: .NET Core Desktop Core // C# 10
-RENDER ENGINE: 2D Grid Rasterization Engine
+PROJECT: DUNGEON_ARCHITECT_V1.1
+ENVIRONMENT: .NET Core Desktop App (WPF) // C# 10
+THEME: Zinc Dark Modern (#09090b / #121214)
 ============================================================
 
-[1. PROCEDURAL GENERATION PIPELINE]
-Primary Algorithm: BSP (Binary Space Partitioning)
-- Recursive subdivision of space down to min room size.
-- Guaranteed room separation and corridor connectivity.
-Secondary Algorithm: Cellular Automata (Cave Generation mode)
-- 4-5 rule for organic wall smoothing.
-- Post-processing flood fill to remove isolated sub-caves.
+[1. PROCEDURAL GENERATION ENGINE]
+Algorithm: Random Walk (Agent-Based Drunkard's Walk)
+- Spawns generator agent at map center (width/2, height/2).
+- Excavates walls (converts TileType.Wall to TileType.Floor) on steps.
+- Random 4-directional movement with border limits constraint.
+- Placing entrance at first floor tile and exit at final step tile.
 
-[2. GRID UTILITIES]
-Map Size Limits: 32x32 to 128x128 tiles
-Tile Types: WALL, FLOOR, DOOR, CORRIDOR, START, EXIT
-Performance: Generates a fully connected 64x64 dungeon in < 5ms.
+[2. INTERACTIVE CONTROLS & VISUALIZER]
+- Map Dimensions: 10x10 to 40x40 tiles grid (SizeSlider).
+- Iterations: 50 to 800 steps (ComplexitySlider).
+- Real-time generation rendering with Task.Delay(15ms) steps animation.
+- Tile Colors: Wall (#0f0f11), Floor (#27272a), Entrance (#06b6d4), Exit (#dc2626).
 
-[3. IMPLEMENTATION DETAILS]
-- Graph-based path connectivity using A* search for corridor validation.
-- Random seed synchronization for reproducible map layouts.
-- Native WinForms/WPF layout visualizer for direct test runs.
+[3. EXPORT PIPELINE]
+- Render Target: RenderTargetBitmap (96 DPI, Pbgra32)
+- Encoder: PngBitmapEncoder
+- Output Destination: Desktop/Dungeon_yyyyMMdd_HHmmss.png
+- Layout bounds captured directly from ItemsControl visual brush.
 
 ============================================================
 END OF SPECIFICATION - 2026_EDITION
